@@ -3,7 +3,8 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {
     public Rigidbody2D rb;
-
+    public Spawner spawner;
+    public float jumpSpeed = 10;
 
     private void Update()
     {
@@ -12,6 +13,6 @@ public class Bird : MonoBehaviour
 
     void Jump()
     {
-        rb.velocity = new Vector2(0, 5);
+        rb.velocity = Vector2.up * jumpSpeed;
     }
 }
